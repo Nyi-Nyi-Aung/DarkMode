@@ -1,0 +1,38 @@
+{
+    "manifest_version": 2,
+    "name": "Dark mode for all websites",
+    "version": "1.2.1",
+    "author": "Rishabh Maheshwari",
+    "description": "Beautiful dark mode for all websites. Open Source, Free and Secure. Protect your eyes when you surf in dark enviroments.",
+    "browser_action":{
+        "default_popup": "popup.html"
+    },
+    "icons": { 
+        "16": "icon16.png",
+        "48": "icon48.png",
+        "128": "icon128.png" 
+    },
+   "background":{
+        "scripts": ["background.js"]
+    },
+    "content_scripts": [
+        {
+            "matches": ["<all_urls>"],
+            "run_at": "document_start",
+            "all_frames":true,
+            "js": [ "jquery-3.3.1.min.js","mutation-summary.js","sauron-library.js","content.js"]
+          
+        }
+    ],
+    "permissions": [
+        "tabs",
+         "*://*/*",
+        "storage"
+    ],
+    "applications":{
+        "gecko":{
+            "id": "darkmode@darkmode.com"
+        }
+
+    }
+}

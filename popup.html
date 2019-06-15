@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Sauron Menu</title>
+        <style type="text/css">
+            *{
+                padding: 0px;
+                margin: 0px;
+            }
+            html{
+                height: 300px;
+                width: 300px;
+            }
+            body{
+                padding: 3px;
+                height: 300px;
+                width: 300px;
+                background-color: #150605;
+                border-left: 0px;
+                border-right: 0px;
+                border-top: 0px;
+                border-bottom: 0px;
+                border-style: solid;
+                border-color: #FFF;
+                font-size: 12px;
+                font-family: "Open Sans", sans-serif;
+            }
+            input{
+                margin: 10px;
+            }
+            div{
+                color:rgb(180,180,180);
+                margin: 3px;
+            }
+
+            button{
+                background-color: rgb(124, 67, 9);
+                color: floralwhite;
+                padding: 5px 5px;
+                margin: 2px 2px;
+                border: 1px 1px 1px 1px;
+                border-style: solid;
+                border-color:#000;
+                border-radius: 4px;
+                font-size: 14px;
+                
+            }
+            button:disabled{
+                opacity: 0.4;
+            }
+            #footer_name{
+                margin: 1px;
+                color:#c1c1c1;
+                font-family: 'Lato', sans-serif;
+                font-size: 28px;
+                position: fixed;
+                left: 120px;
+                bottom: 30px;
+                
+                
+            }
+            a{
+                color: rgb(180,180,180);
+            }
+            img{
+                margin: 2px;
+                position: fixed;
+                left: 70px;
+                bottom: 25px;
+                
+            }
+            footer{
+                text-align: center; 
+                background-color: rgba(255,255,255,0.1);
+                width: 306px;
+                position: fixed;
+                bottom: 0px;
+                left: 0px;
+                height: 75px;
+            }
+            #credits{
+                position: fixed;
+                bottom: 0px;
+                font-weight: 600;
+                padding-bottom: 2px;
+                font-size: 12px;
+                left: 0px;
+                text-align: center;
+                width: 306px;
+            }
+            .settingsName{
+                font-size: 14px;
+            }
+            .hyperlink_buttons{
+                margin: -2px;
+                margin-top: 3px;
+                margin-right:2px;
+            }
+            .float{
+                float: left;
+            }
+            input{
+                margin: 0px;
+                margin-right: 4px;
+                color: #fff;
+                background-color: rgb(124, 67, 9);
+                border: none;
+    
+            }
+            .schdlrPrefs{
+                height: 24px;
+                width:306px;
+                margin-top: 6px;
+                padding:0px;
+            }
+            .info{
+                font-weight: bold;
+                color: #808000;
+                font-size: 10px;
+                padding-top: 3px;
+            }
+        </style>
+        <script src="jquery-3.3.1.min.js"></script>
+        <script src="popup.js"> </script>
+        <link href="https://fonts.googleapis.com/css?family=Lato|Open+Sans" rel="stylesheet">
+
+    </head>
+    <body>
+        <div class="settingsName"><p><strong>Dark Mode Settings</strong></p></div>
+        <button id="toggle" name="toggleButton">Website Toggle: ON</button>
+        <button id="power" name="powerButton">Enabled for all websites</button><br>
+        
+        <div class="settingsName"><p><strong>Scheduler Settings</strong></p></div>
+		<div>
+            <button id="schdlPower" class="float" name="schdlPowerButton" style="margin-left:0px;">Scheduler disabled</button>
+            <div class="info"><p>Disable Scheduler to change time.</p></div><br>
+        </div>
+        <div class="schdlrPrefs">
+        <form id="schdlrForm">
+			<div class="float"><p><strong>Turn on at: </strong></p></div>
+            <input id="schdlOn" class="float" type="time" name="turnOntime">
+            <div class="float"><p><strong>Turn off at: </strong></p></div>
+            <input id="schdlOff" class="float" type="time" name="turnOffTime" style="margin-left:0px;">
+     
+            
+        </form>
+        </div>
+        
+       
+    </body>
+</html>
